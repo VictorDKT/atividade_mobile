@@ -11,9 +11,9 @@ import android.text.Editable
 import android.widget.TextView
 import java.text.DecimalFormat
 
-fun calcularPorcentagem(primeiroValor: Double, segundoValor: Double): Double {
+fun calcularPorcentagem(primeiroValor: Double, segundoValor: Double, errorMessage: String): Double {
     if (segundoValor == 0.0) {
-        throw IllegalArgumentException("O segundo valor não pode ser zero.")
+        throw IllegalArgumentException(errorMessage)
     }
 
     val porcentagem = (primeiroValor / segundoValor) * 100.0
@@ -84,20 +84,27 @@ class MainActivity : AppCompatActivity() {
 
         val buttonCalc: Button = findViewById(R.id.btCalcular)
         buttonCalc.setOnClickListener() {
-            Log.d("PDM23","No onResume, $valorAlcool gas $valorGasolina")
-            val newPercent = calcularPorcentagem(valorAlcool, valorGasolina)
+            val errorMessage = getString(R.string.not_zero)
+            val newPercent = calcularPorcentagem(valorAlcool, valorGasolina, errorMessage)
             val resultText: TextView = findViewById(R.id.result)
             val formato = DecimalFormat("0.00")
             val numeroFormatado = formato.format(newPercent)
             val bestOptionText: TextView = findViewById(R.id.bestOption)
 
-            resultText.setText("O valor do alcool equivale a $numeroFormatado% do valor da gasolina")
+            val resultStartString = getString(R.string.result_start)
+            val resultEndString = getString(R.string.result_end)
+            val bestOptionString = getString(R.string.best_option)
+            val alcoholString = getString(R.string.alcohol)
+            val gasString = getString(R.string.gas)
+            val sameValueString = getString(R.string.same_value)
+
+            resultText.setText("$resultStartString $numeroFormatado% $resultEndString")
             bestOptionText.setText(if(percent > newPercent) {
-                "A melhor opção é o alcool"
+                "$bestOptionString $alcoholString"
             } else if(percent === newPercent) {
-                "Alcool e gasolina são igualmente rentáveis"
+                sameValueString
             } else {
-                "A melhor opção é a gasolina"
+                "$bestOptionString $gasString"
             })
         }
     }

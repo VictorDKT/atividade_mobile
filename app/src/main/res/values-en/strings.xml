@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">With what fuel?</string>
+    <string name="image_desc">A gas pump illustrating the app</string>
+    <string name="alcohol_or_gas">Alcohol or gasoline?</string>
+    <string name="alcohol_price">Alcohol price</string>
+    <string name="gas_price">Gasoline price</string>
+    <string name="calculate">Calculate</string>
+    <string name="best_option">A melhor opção é</string>
+    <string name="gas">gasoline</string>
+    <string name="alcohol">alcohol</string>
+    <string name="same_value">Alcohol and gasoline are equally profitable</string>
+    <string name="result_start">The value of alcohol is equivalent to</string>
+    <string name="result_end">of the value of gasoline</string>
+    <string name="not_zero">The second value cannot be zero.</string>
+</resources>
