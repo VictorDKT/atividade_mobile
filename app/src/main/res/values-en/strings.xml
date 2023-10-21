@@ -6,7 +6,7 @@
     <string name="alcohol_price">Alcohol price</string>
     <string name="gas_price">Gasoline price</string>
     <string name="calculate">Calculate</string>
-    <string name="best_option">A melhor opção é</string>
+    <string name="best_option">The best option is</string>
     <string name="gas">gasoline</string>
     <string name="alcohol">alcohol</string>
     <string name="same_value">Alcohol and gasoline are equally profitable</string>
