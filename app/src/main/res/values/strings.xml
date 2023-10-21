@@ -2,7 +2,7 @@
     <string name="app_name">Com qual combustível?</string>
     <string name="image_desc">Uma bomba de gasolina ilustrando o app</string>
     <string name="alcohol_or_gas">Álcool ou gasolina?</string>
-    <string name="alcohol_price">Preço do alcohol</string>
+    <string name="alcohol_price">Preço do álcool</string>
     <string name="gas_price">Preço da gasolina</string>
     <string name="calculate">Calcular</string>
     <string name="best_option">A melhor opção é</string>
